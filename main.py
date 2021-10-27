@@ -80,9 +80,10 @@ async def talk_bot(message):
 
     if message.content == 'a!help':
         embed=discord.Embed(title="Help" , color=0x84c5e6)
-        embed.add_field(name="คาบนี้", value="พิมพ์ในช่องแชท", inline=False)
-        embed.add_field(name="คาบต่อไป", value="พิมพ์ในช่องแชท", inline=False)
-        embed.add_field(name="ตารางเรียน", value="พิมพ์ในช่องแชท", inline=True)
+        embed.add_field(name="คาบนี้", value="เพื่อดูคาบเรียนปัจจุบัน", inline=False)
+        embed.add_field(name="คาบต่อไป", value="เพื่อดูคาบเรียนคาบต่อไป", inline=False)
+        embed.add_field(name="คาบที่แล้ว", value="เพื่อดูคาบเรียนคาบที่แล้ว", inline=False)
+        embed.add_field(name="ตารางเรียน", value="เพื่อดูตารางสอน", inline=True)
         embed.set_thumbnail(url = bot.user.avatar_url)
         await message.channel.send(embed=embed)
 
