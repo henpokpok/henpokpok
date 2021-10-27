@@ -75,11 +75,12 @@ async def talk_bot(message):
             await message.channel.send("มึงเอ๋อหรอ")
 
     if 'ตารางเรียน' in message.content:   
-        file = discord.File("image/ตารางเรียน.jpg")
+        file = discord.File("ตารางเรียน.jpg")
         await message.channel.send(file = file)
 
     if message.content == 'a!help':
         embed=discord.Embed(title="Help" , color=0x84c5e6)
+        embed.add_field(name="a!help", value="ส่งหน้า Help", inline=False)
         embed.add_field(name="คาบนี้", value="เพื่อดูคาบเรียนปัจจุบัน", inline=False)
         embed.add_field(name="คาบต่อไป", value="เพื่อดูคาบเรียนคาบต่อไป", inline=False)
         embed.add_field(name="คาบที่แล้ว", value="เพื่อดูคาบเรียนคาบที่แล้ว", inline=False)
