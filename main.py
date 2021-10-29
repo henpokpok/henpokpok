@@ -77,8 +77,8 @@ async def talk_bot(message):
     if 'คาบเมื่อกี้' in message.content or 'คาบที่แล้ว' in message.content:  
         if day_today in table.day and x < 10:
             embed=discord.Embed(title="คาบที่แล้ว" , color=0x84c5e6)
-            embed.add_field(name="คาบ", value='table.day[f"{day_today}"][x-1]', inline=False)
-            embed.add_field(name="ครูผู้สอน", value='table.Teacher[f"{day_today}"][x-1]', inline=False)
+            embed.add_field(name="คาบ", value=f'table.day[f"{day_today}"][x-1]', inline=False)
+            embed.add_field(name="ครูผู้สอน", value=f'table.Teacher[f"{day_today}"][x-1]', inline=False)
             await message.channel.send(embed=embed)
         else:
             await message.channel.send("มึงเอ๋อหรอ")
