@@ -60,7 +60,7 @@ async def talk_bot(message):
         if day_today in table.day and x < 10:
             embed=discord.Embed(title="คาบนี้" , color=0x84c5e6)
             embed.add_field(name="คาบ", value='f"{table.day[f'{day_today}'][x]} {table.timestart['timestart'][x]} - {table.timestart['timestart'][x+1]}"', inline=False)
-            embed.add_field(name="ครูผู้สอน", value='f"{table.Teacher[f'{Teacher_today}'][x]} {table.timestart['timestart'][x]} - {table.timestart['timestart'][x+1]}"', inline=False)
+            embed.add_field(name="ครูผู้สอน", value='f"{table.Teacher[f'{day_today}'][x]} {table.timestart['timestart'][x]} - {table.timestart['timestart'][x+1]}"', inline=False)
             await message.channel.send(embed=embed)
         else:
             await message.channel.send("อะไรของมึง กวนตีนกูหรอ")
